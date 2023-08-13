@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: customer-service
+  profile: dev
   datasource:
     url: jdbc:mysql://localhost:3306/customer_db?createDatabaseIfNotExist=true
     username: root
