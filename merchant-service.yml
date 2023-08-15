@@ -17,8 +17,6 @@ spring:
       # Hibernate ddl auto (create, create-drop, validate, update)
       ddl: update
     show-sql: true
-  config:
-    import: configserver:http://localhost:8888
 eureka:
   client:
     register-with-eureka: true
