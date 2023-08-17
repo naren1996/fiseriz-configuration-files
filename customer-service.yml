@@ -16,7 +16,7 @@ spring:
     #Dilect - Generate Query
     hibernate:
       # Hibernate ddl auto (create, create-drop, validate, update)
-      ddl: update
+      ddl-auto: update
     show-sql: true
 
 eureka:
