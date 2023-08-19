@@ -8,6 +8,21 @@ spring:
     admin:
       client:
         url: http://localhost:9000/
+  datasource:
+    url: jdbc:mysql://localhost:3306/customer_db?createDatabaseIfNotExist=true
+    username: root
+    password: Naren@123
+      #driverClassName: com.mysql.jdbc.Driver
+    #Hibernate
+    #The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    #database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
+    #Dilect - Generate Query
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      ddl-auto: update
+    show-sql: true
+    
 management:
   endpoints:
     web:
@@ -16,20 +31,7 @@ management:
   health:
     show-details: always
     
-  datasource:
-    url: jdbc:mysql://localhost:3306/customer_db?createDatabaseIfNotExist=true
-    username: root
-    password: Naren@123
-    #driverClassName: com.mysql.jdbc.Driver
-     #Hibernate
-     #The SQL dialect makes Hibernate generate better SQL for the chosen database
-  jpa:
-    #database-platform: org.hibernate.dialect.MySQL8InnoDBDialect
-    #Dilect - Generate Query
-    hibernate:
-      # Hibernate ddl auto (create, create-drop, validate, update)
-      ddl-auto: update
-    show-sql: true
+
 
 eureka:
   client:
