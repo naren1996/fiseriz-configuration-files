@@ -22,7 +22,7 @@ spring:
       # Hibernate ddl auto (create, create-drop, validate, update)
       ddl-auto: update
     show-sql: true
-    
+
 management:
   endpoints:
     web:
