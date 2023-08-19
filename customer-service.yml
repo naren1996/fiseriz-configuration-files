@@ -5,8 +5,17 @@ spring:
   application:
     name: customer-service
   boot:
-      admin:
-         url: http://localhost:9000/
+    admin:
+      client:
+        url: http://localhost:9000/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    show-details: always
+    
   datasource:
     url: jdbc:mysql://localhost:3306/customer_db?createDatabaseIfNotExist=true
     username: root
